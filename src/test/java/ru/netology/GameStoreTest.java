@@ -69,6 +69,19 @@ public class GameStoreTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldFindMostWithOneHour() {
+        GameStore store = new GameStore();
+
+        store.addPlayTime("Володя545", 1);
+
+        String expected = "Володя545";
+        String actual = store.getMostPlayer();
+
+        assertEquals(expected, actual);
+    }
+
     @Test
     public void shouldAFindMostWithNone() {
         GameStore store = new GameStore();
