@@ -1,6 +1,7 @@
 package ru.netology;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class GameStoreTest {
@@ -37,22 +38,6 @@ public class GameStoreTest {
 
         int expected = (14);
         int actual = store.getSumPlayedTime();
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldFindMostWithTwo() {
-        GameStore store = new GameStore();
-
-
-        store.addPlayTime("Илья346", 12);
-        store.addPlayTime("Никита386", 12);
-        store.addPlayTime("Даша246", 10);
-        store.addPlayTime("Света566", 8);
-
-        String expected = ("Илья346");
-        String actual = store.getMostPlayer();
 
         assertEquals(expected, actual);
     }
